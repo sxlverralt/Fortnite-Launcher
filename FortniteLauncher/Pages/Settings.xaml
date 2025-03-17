@@ -1,0 +1,45 @@
+﻿<UserControl x:Class="WpfApp6.Pages.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:WpfApp6.Pages"
+             mc:Ignorable="d" d:DesignWidth="1280" Height="720" Visibility="Visible">
+
+    <Grid Background="#1f1f1f">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="17*"/>
+            <RowDefinition Height="13*"/>
+        </Grid.RowDefinitions>
+        <Rectangle Fill="#FF111111" Margin="510,126,81,84" RadiusX="10" RadiusY="10" Grid.Row="1"/>
+        <Image HorizontalAlignment="Left" Height="300" VerticalAlignment="Top" Width="818" Source="/Pages/Banner.png" RenderTransformOrigin="1.268,0.599" Margin="256,20,0,0"/>
+        <PasswordBox x:Name="PasswordBox" Margin="89,10,968,261" Padding="5" Grid.Row="1"/>
+        <TextBlock Text="Password:" Foreground="White" Margin="0,10,737,261" FontFamily="Arial Black" FontSize="15" Grid.Row="1"/>
+        <TextBlock x:Name="clock"
+                   Height="61"
+                   Margin="270,139,344,0"
+                   VerticalAlignment="Top"
+                   Padding="70,0,0,0"
+                   FontFamily="Impact"
+                   TextAlignment="Center"
+                   Foreground="White"
+                   FontSize="50"><InlineUIContainer/></TextBlock>
+        <TextBlock Text="Email:" Foreground="White" Margin="10,370,792,6" FontFamily="Arial Black" FontSize="15"/>
+        <Button Content="Save Settings" Click="SaveSettings_Click" Margin="428,364,0,0" VerticalAlignment="Top" Height="44" Background="#FFD8D8D8"/>
+        <TextBox x:Name="EmailTextBox" Margin="78,370,968,0" Padding="5" Text="Email" Foreground="Gray" GotFocus="EmailTextBox_GotFocus" LostFocus="EmailTextBox_LostFocus"/>
+        <Border BorderThickness="0.5" HorizontalAlignment="Left" Height="2" Margin="15,359,0,0" VerticalAlignment="Top" Width="1224" Background="White" Opacity="0.4"/>
+        <CheckBox x:Name="RememberMeCheckBox" Content="Remember Me" Foreground="White" Margin="345,14,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+        <TextBlock TextWrapping="Wrap" Height="26" Width="123" FontWeight="Bold" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="20" Margin="16,300,0,0" FontFamily="Arial Black" Text="Settings"/>
+        <Grid Margin="510,126,50,74" MouseLeftButtonDown="DiscordLinkCard_MouseLeftButtonDown" MouseEnter="DiscordLinkCard_MouseEnter" MouseLeave="DiscordLinkCard_MouseLeave" Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0" Source="/Pages/Discord.png" Stretch="Fill" Margin="-8,-34,518,-24" RenderTransformOrigin="0.865,0.452" Grid.ColumnSpan="2"/>
+            <StackPanel Grid.Column="1" Margin="0,34,317,-24"/>
+            <TextBlock FontSize="12" TextWrapping="Wrap" FontFamily="Arial Black" Grid.ColumnSpan="2" Margin="202,51,136,-18" Foreground="White"><Run Text="              Click here to join our Discord"/><Run Language="it-it" Text=" And Stay Updated!"/></TextBlock>
+            <TextBlock Text="Join our Discord!" FontSize="16" FontWeight="Bold" FontFamily="Arial Black" Grid.ColumnSpan="2" Margin="265,14,116,10" Foreground="White"/>
+        </Grid>
+
+    </Grid>
+</UserControl>
